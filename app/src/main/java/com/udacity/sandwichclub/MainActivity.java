@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
                 android.R.layout.simple_list_item_1, sandwiches);
 
 
-        // Simplification: Using a ListView instead of a RecyclerView
+        // Simplification: Using a ListView instead of a RecyclerView .
         ListView listView = findViewById(R.id.sandwiches_listview);
         listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
