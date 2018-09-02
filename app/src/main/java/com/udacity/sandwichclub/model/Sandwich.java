@@ -2,7 +2,7 @@ package com.udacity.sandwichclub.model;
 
 import java.util.List;
 
-public class Sandwich {
+public class  Sandwich {
 
     private String mainName;
     private List<String> alsoKnownAs = null;
@@ -72,5 +72,17 @@ public class Sandwich {
 
     public void setIngredients(List<String> ingredients) {
         this.ingredients = ingredients;
+    }
+
+    @Override
+    public String toString() {
+        return "Sandwich{" +
+                "mainName='" + mainName + '\'' +
+                ", alsoKnownAs=" + alsoKnownAs +
+                ", placeOfOrigin='" + placeOfOrigin + '\'' +
+                ", description='" + description + '\'' +
+                ", image='" + image + '\'' +
+                ", ingredients=" + ingredients +
+                '}';
     }
 }
