@@ -46,7 +46,7 @@
         android:id="@+id/detail_place_of_origin_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/detail_also_known_as_label"
+        android:layout_below="@id/also_known_as_Show"
         android:textSize="18sp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
@@ -67,7 +67,7 @@
         android:id="@+id/detail_ingredients_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/detail_place_of_origin_label"
+        android:layout_below="@id/place_of_origin_Show"
         android:textSize="18sp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
@@ -81,14 +81,15 @@
         android:layout_below="@id/place_of_origin_Show"
         android:layout_marginTop="16dp"
         android:paddingLeft="10dp"
-        android:layout_toRightOf="@id/detail_ingredients_label" />
+        android:layout_toEndOf="@id/detail_ingredients_label"
+        tools:ignore="RtlCompat" />
 
 
     <TextView
         android:id="@+id/detail_description_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/detail_ingredients_label"
+        android:layout_below="@id/ingredients_Show"
         android:textSize="18sp"
         android:layout_marginLeft="5dp"
         android:layout_marginTop="10dp"
@@ -102,7 +103,8 @@
         android:layout_below="@id/ingredients_Show"
         android:layout_marginTop="16dp"
         android:paddingLeft="10dp"
-        android:layout_toRightOf="@id/detail_description_label" />
+        android:layout_toEndOf="@id/detail_description_label"
+        tools:ignore="RtlCompat" />
 
 
     </RelativeLayout>

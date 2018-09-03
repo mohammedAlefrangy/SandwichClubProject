@@ -24,30 +24,30 @@ public class JsonUtils {
             JSONObject name = contact.getJSONObject("name");
 
             //the mainName item in json
-            String mainName = name.getString("mainName");
-            sandwich.setMainName(mainName);
+            final String KEY_MAIN_NAME = name.optString("mainName");
+            sandwich.setMainName(KEY_MAIN_NAME);
 
             //the alsoKnownAs item in json
-            JSONArray alsoKnowNames = name.getJSONArray("alsoKnownAs");
-            List<String> alsoKnownAsName = jsonArrayList(alsoKnowNames);
-            sandwich.setAlsoKnownAs(alsoKnownAsName);
+            JSONArray KEY_ALSO_KNOW_AS  = name.getJSONArray("alsoKnownAs");
+            List<String> array_alsoKnownAsName = jsonArrayList(KEY_ALSO_KNOW_AS);
+            sandwich.setAlsoKnownAs(array_alsoKnownAsName);
 
             //the second item in json
-            String placeOfOrigin = contact.getString("placeOfOrigin");
-            sandwich.setPlaceOfOrigin(placeOfOrigin);
+            String KEY_PLACE_OF_ORIGIN = contact.optString("placeOfOrigin");
+            sandwich.setPlaceOfOrigin(KEY_PLACE_OF_ORIGIN);
 
             //the three item in json
-            String description = contact.getString("description");
-            sandwich.setDescription(description);
+            String KEY_DESCRIPTION  = contact.optString("description");
+            sandwich.setDescription(KEY_DESCRIPTION);
 
             //the four item in json
-            String image = contact.getString("image");
-            sandwich.setImage(image);
+            String KEY_IMAGE = contact.optString("image");
+            sandwich.setImage(KEY_IMAGE);
 
             //Sandwich is also ingredients as
-            JSONArray ingredients = contact.getJSONArray("ingredients");
-            List<String> ingredientslis = jsonArrayList(ingredients);
-            sandwich.setIngredients(ingredientslis);
+            JSONArray KEY_INGREDIENTS = contact.getJSONArray("ingredients");
+            List<String> array_ingredientslis = jsonArrayList(KEY_INGREDIENTS);
+            sandwich.setIngredients(array_ingredientslis);
 
 
             return sandwich;

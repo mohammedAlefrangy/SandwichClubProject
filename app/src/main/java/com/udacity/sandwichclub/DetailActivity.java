@@ -56,6 +56,9 @@ public class DetailActivity extends AppCompatActivity {
         populateUI();
         Picasso.with(this)
                 .load(sandwich.getImage())
+                //I make this comment because i can't found user_placeholder image and user_placeholder_error
+//                .placeholder(R.drawable.user_placeholder)
+//                .error(R.drawable.user_placeholder_error)
                 .into(ingredientsIv);
         setTitle(sandwich.getMainName());
 
